@@ -10,7 +10,7 @@ async function attachCurrentUser(req, res, next) {
       { passwordHash: 0 }
     );
 
-    if (!user) {
+    if (!user || !user.isActive) {
       return res.status(400).json({ message: "This user does not exist." });
     }
 

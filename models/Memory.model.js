@@ -16,7 +16,6 @@ const memorySchema = new Schema({
       "Embarrassed",
       "Regret",
       "Frustrated",
-      "Sextou",
     ],
     default: "Happy",
   },

@@ -12,6 +12,8 @@ const userSchema = new Schema({
   role: { type: String, enum: ["USER", "ADMIN"], default: "USER" },
   memories: [{ type: Types.ObjectId, ref: "Memory" }],
   albuns: [{ type: Types.ObjectId, ref: "Album" }],
+  albunsRestrictions: { type: Boolean, default: false },
+  isActive: { type: Boolean, default: true },
 });
 
 const UserModel = model("User", userSchema);
